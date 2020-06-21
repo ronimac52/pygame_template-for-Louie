@@ -2,6 +2,18 @@
 import Pygame
 import random
 
+# Colors (R, G, B)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+
+# Draw / render
+    screen.fill(BLACK)
+    # *after* drawing everything, flip the display
+    pygame.display.flip()
+
 WIDTH = 360 # width of new game window
 HEIGTH = 480 # height ------------
 FPS = 30 # frames per second
@@ -12,3 +24,16 @@ pygame.mixer.init()  # for sound
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("My Game")
 clock = pygame.time.Clock()
+
+# Game Loop
+running = True
+while running:
+    # Process input (events)
+    # Update
+    # Render (draw)
+# set up event capabilities
+    for event in pygame.event.get():
+        # check for closing window
+        if event.type == pygame.QUIT:
+            running = False
+            
